@@ -14,8 +14,42 @@
           <h1>Slalom Capabilities Management</h1>
           <h2>Consulting Expertise Platform</h2>
         </div>
+        <div class="auth-section">
+          <button id="loginBtn" class="auth-btn">🔒 Login</button>
+          <div id="userInfo" class="user-info hidden">
+            <span id="userEmail"></span>
+            <span id="userRole" class="role-badge"></span>
+            <button id="logoutBtn" class="auth-btn logout">Logout</button>
+          </div>
+        </div>
       </div>
     </header>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login to Slalom Capabilities</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required placeholder="your-email@slalom.com" />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required placeholder="Enter your password" />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <div id="loginMessage" class="hidden"></div>
+        <div class="demo-credentials">
+          <p><strong>Demo Credentials:</strong></p>
+          <p>Admin: admin@slalom.com / admin123</p>
+          <p>Approver: approver@slalom.com / approver123</p>
+          <p>Consultant: consultant@slalom.com / consultant123</p>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section id="capabilities-container">
